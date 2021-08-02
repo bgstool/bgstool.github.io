@@ -24,18 +24,9 @@
         from {top: 64px;opacity: 0;}
         to {top: 0;opacity: 1;}
         }
-        h1,h2,h3,h4,h5,h6,p,span{
-        animation-name: toleft;
-        animation-duration: 1s;
-        }
         @keyframes toleft{
         from {margin-left: 64px;opacity: 0;}
         to {}
-        }
-        .mdui-btn{
-        animation-name: toright;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
         }
         @keyframes toright{
         from {margin-right: 64px;opacity: 0;}
@@ -59,13 +50,29 @@
         height: auto;
         margin-top: 48px;
         }
+        .mdui-btn,.opacity{
+        animation-name: opacity;
+        animation-duration: 1s;
+        }
+		@keyframes opacity{
+		from  {opacity: 0;}
+		to {opacity: 1;}
+		}
+		.img{
+		animation-name: img;
+		animation-duration: 1s;
+		}
+		@keyframes img{
+		from {width: 75%;}
+		to {width: 100%;}
+		}
         </style>
 	</head> 
 	<body class="mdui-theme-primary-blue mdui-theme-accent-blue mdui-theme-layout-auto mdui-appbar-with-toolbar">  
    		<header>
          	<div class="mdui-appbar mdui-appbar-fixed">
             	<div class="mdui-toolbar mdui-color-theme-accent">
-               		<a class="mdui-typo-title toleft">BGS工具站 历史版本</a>
+               		<a class="mdui-typo-title opacity">BGS工具站 历史版本</a>
                     <div class="mdui-toolbar-spacer"></div>
                     <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '切换主题'}" onclick="theme()">
                     	<i class="mdui-icon material-icons">brightness_medium</i>
@@ -74,18 +81,18 @@
             </div>
          </header>
          <div class="mdui-card mdui-shadow-24">
-         		<div class="mdui-card-header toleft">
+         		<div class="mdui-card-header">
                		<img class="mdui-card-header-avatar" src="images/BGS_LOGO_20210305.png">
                    	<div class="mdui-card-header-title">Burger Studio</div>
                     <div class="mdui-card-header-subtitle">虚拟稽</div>
                	</div>
                 <div class="mdui-card-media" style="animation-name: card;animation-duration: 1s;">
-                	<img src="images/BGS_JPEG_20210305.jpg" style="border-radius: 10px;max-height: 512px;max-width: 384px;margin-left: auto;margin-right: auto;" class="mdui-shadow-6 mdui-img-fluid">
+                	<img src="images/BGS_JPEG_20210305.jpg" style="border-radius: 10px;max-height: 512px;max-width: 384px;margin-left: auto;margin-right: auto;" class="mdui-shadow-6 mdui-img-fluid img">
                 </div>
-                <div class="mdui-card-primary toleft">
+                <div class="mdui-card-primary">
                 	<div class="mdui-card-primary-title">Burger Studio 简介</div>
                 </div>
-         		<div class="mdui-card-content toleft">
+         		<div class="mdui-card-content">
                		Burger Studio 于 2020 年创立，起初只是搞一些虚拟机（故中文名为虚拟稽），后来逐渐开始研究其它方面的内容，如 Windows / Linux 系统安装、 Android 刷机等，偶尔会在B站发视频。
                     <br>在2021年年初，我们开始编写 Burger Studio 工具站 （原名资源站），并不定期地更新。
                    	<br><br>早期的 Burger Studio 陆续被命名为 Administrator 、 Admin Studios 和 Admin Studio 。
@@ -285,7 +292,7 @@
     </footer>
 	</body>
    	<script>
-      	if (localStorage.getItem('darkTheme') == 'true' || new Date().getHours() >= 22 || new Date().getHours() < 7){
+      	if (localStorage.getItem('darkTheme') == 'true' || new Date().getHours() >= 22 || new Date().getHours() < 6){
     		document.body.classList.add('mdui-theme-layout-dark');
 		}
     	function theme(){
