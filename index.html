@@ -3,7 +3,7 @@
 	<head> 
 		<meta charset="UTF-8"> 
 		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"> 
-		<title>Burger Studio 工具站</title> 
+		<title>Burger工具站</title> 
 		<link rel="shortcut  icon" href="images/BGS_LOGO_20210305_2.png" type="image/x-icon"> 
 		<link rel="stylesheet" href="mdui/css/mdui.min.css"> 
 		<script src="mdui/js/mdui.min.js"></script> 
@@ -63,8 +63,8 @@
 		animation-duration: 1s;
 		}
 		@keyframes img{
-		from {margin-top: 32px;margin-bottom: 32px;}
-		to {}
+		from {width: 75%;}
+		to {width: 100%;}
 		}
         </style>
 	</head> 
@@ -72,7 +72,7 @@
    		<header>
          	<div class="mdui-appbar mdui-appbar-fixed">
             	<div class="mdui-toolbar mdui-color-theme-accent">
-               		<a class="mdui-typo-title opacity">BGS工具站 历史版本</a>
+               		<a class="mdui-typo-title opacity" onclick="window.scrollTo(0,0)">Burger工具站 历史版本</a>
                     <div class="mdui-toolbar-spacer"></div>
                     <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '切换主题'}" onclick="theme()">
                     	<i class="mdui-icon material-icons">brightness_medium</i>
@@ -94,15 +94,15 @@
                 </div>
          		<div class="mdui-card-content">
                		Burger Studio 于 2020 年创立，起初只是搞一些虚拟机（故中文名为虚拟稽），后来逐渐开始研究其它方面的内容，如 Windows / Linux 系统安装、 Android 刷机等，偶尔会在B站发视频。
-                    <br>在2021年年初，我们开始编写 Burger Studio 工具站 （原名资源站），并不定期地更新。
+                    <br>在2021年年初，我们开始编写 Burger工具站 （原资源站），并不定期地更新。
                    	<br><br>早期的 Burger Studio 陆续被命名为 Administrator 、 Admin Studios 和 Admin Studio 。
                 </div>
                 <div class="mdui-card-actions mdui-card-actions-stacked">
-                	<a href="https://burgerstudio.github.io/" class="mdui-btn mdui-ripple mdui-text-color-theme-accent mdui-ripple-blue mdui-text-color-theme-text">访问 BGS工具站 的最新版本</a>
-                   	<a href="https://github.com/burgerstudio/burgerstudio.github.io" class="mdui-btn mdui-ripple mdui-text-color-theme-accent mdui-ripple-blue mdui-text-color-theme-text">BGS工具站 开源项目</a>
+                	<a href="https://burgerstudio.github.io/" class="mdui-btn mdui-ripple mdui-text-color-theme-accent mdui-ripple-blue mdui-text-color-theme-text">访问 Burger工具站 的最新版本</a>
+                   	<a href="https://github.com/burgerstudio/burgerstudio.github.io" class="mdui-btn mdui-ripple mdui-text-color-theme-accent mdui-ripple-blue mdui-text-color-theme-text">Burger工具站 开源项目</a>
                 </div>
          </div>
-         <p style="margin: 36px;font-size: 15px;font-weight: bold;" class="mdui-text-color-theme-accent mdui-text-color-theme-text">在这里，您可以浏览 Burger Studio 工具站 的全部版本，了解它是怎样更新的。<br><br>点击任意页面的“返回索引页”按钮即可返回此页。</p>
+         <p style="margin: 36px;font-size: 15px;font-weight: bold;" class="mdui-text-color-theme-accent mdui-text-color-theme-text">在这里，您可以浏览 Burger工具站 的全部版本，了解它是怎样更新的。<br><br>点击任意页面的“返回索引页”按钮即可返回此页。</p>
          <div class="mdui-card mdui-shadow-12">
          	<div class="mdui-card-primary">
             	<div class="mdui-card-primary-title">2021-02-09</div>
@@ -229,7 +229,7 @@
          <div class="mdui-card mdui-shadow-12" style="margin-top: 32px;">
          	<div class="mdui-card-primary">
             	<div class="mdui-card-primary-title">最新版本</div>
-               	<div class="mdui-card-primary-subtitle">Burger Studio 工具站</div>
+               	<div class="mdui-card-primary-subtitle">Burger工具站</div>
             </div>
             <div class="mdui-card-content">
             前往 GitHub 访问我们的最新版本。
@@ -292,7 +292,7 @@
     </footer>
 	</body>
    	<script>
-      	if (localStorage.getItem('darkTheme') == 'true' || new Date().getHours() >= 22 || new Date().getHours() < 7){
+      	if (localStorage.getItem('darkTheme') == 'true' || new Date().getHours() >= 22 || new Date().getHours() < 6){
     		document.body.classList.add('mdui-theme-layout-dark');
 		}
     	function theme(){
