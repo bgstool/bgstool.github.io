@@ -1,2 +1,2 @@
 # bgstool.github.io
-Burger Studio 工具站
+Burger工具站 历史版本
